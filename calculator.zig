@@ -15,7 +15,6 @@ pub fn main() !void {
     var stdout_buffer_frame: [1024]u8 = undefined;
     var stdout_writer_frame = std.fs.File.stdout().writer(&stdout_buffer_frame);
     const writer = &stdout_writer_frame.interface;
-
     // defining a stdin reader
     var stdin_buffer_frame: [512]u8 = undefined;
     var stdin_reader_frame = std.fs.File.stdin().reader(&stdin_buffer_frame);
